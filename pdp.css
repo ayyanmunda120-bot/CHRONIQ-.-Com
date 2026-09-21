@@ -1,0 +1,645 @@
+/* =====================================================
+   CHRONIQ CHECKOUT PAGE
+   Complete Responsive CSS
+===================================================== */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #f5f6f8;
+    color: #171717;
+    line-height: 1.6;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.checkout-header {
+    width: 100%;
+    background: #0b0b0b;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    min-height: 75px;
+    margin: auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.back-home {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 11px 18px;
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.back-home:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+
+/* ---------- MAIN PAGE ---------- */
+
+.checkout-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 55px 20px 80px;
+}
+
+.checkout-container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+
+/* ---------- PAGE HEADING ---------- */
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.page-heading span {
+    display: inline-block;
+    color: #777;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.page-heading h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.page-heading p {
+    color: #777;
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   PRODUCT FORM CARD
+===================================================== */
+
+.product-form {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    padding: 35px;
+    margin-bottom: 35px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s ease;
+}
+
+.product-form:hover {
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ---------- PRODUCT TOP ---------- */
+
+.product-top {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 35px;
+
+    padding-bottom: 35px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ---------- PRODUCT IMAGE ---------- */
+
+.product-image {
+    height: 280px;
+    background: #f6f6f6;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+
+    transition: transform 0.4s ease;
+}
+
+.product-image:hover img {
+    transform: scale(1.06);
+}
+
+
+/* ---------- PRODUCT INFORMATION ---------- */
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-brand {
+    color: #888;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.product-info h2 {
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.product-description {
+    max-width: 600px;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: #111;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   FORM SECTION
+===================================================== */
+
+.form-section {
+    padding: 32px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.form-section h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 22px;
+}
+
+
+/* ---------- FORM GRID ---------- */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* ---------- INPUT GROUP ---------- */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.input-group label {
+    color: #222;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+
+/* ---------- INPUTS ---------- */
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    border: 1px solid #dddddd;
+    background: #fafafa;
+
+    color: #111;
+    font-family: inherit;
+    font-size: 14px;
+
+    border-radius: 9px;
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+.input-group input {
+    height: 50px;
+    padding: 0 15px;
+}
+
+.input-group textarea {
+    padding: 14px 15px;
+    resize: vertical;
+    min-height: 110px;
+}
+
+
+/* ---------- INPUT FOCUS ---------- */
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    background: #ffffff;
+    border-color: #111111;
+
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ---------- PLACEHOLDER ---------- */
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* =====================================================
+   PAYMENT
+===================================================== */
+
+.payment-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.payment-option {
+    min-height: 65px;
+    padding: 15px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: #fafafa;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.payment-option:hover {
+    border-color: #111;
+    background: #ffffff;
+}
+
+.payment-option input {
+    width: 18px;
+    height: 18px;
+    accent-color: #111;
+    cursor: pointer;
+}
+
+.payment-option span {
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ORDER SUMMARY
+===================================================== */
+
+.order-summary {
+    padding: 28px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.order-summary > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #777;
+    font-size: 14px;
+}
+
+.order-summary strong {
+    color: #222;
+    font-weight: 700;
+    text-align: right;
+    max-width: 55%;
+}
+
+.order-summary .total {
+    margin-top: 8px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+}
+
+.order-summary .total span {
+    color: #111;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.order-summary .total strong {
+    color: #111;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   PLACE ORDER BUTTON
+===================================================== */
+
+.place-order-btn {
+    width: 100%;
+    height: 58px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #111111;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.place-order-btn:hover {
+    background: #2b2b2b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.place-order-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .checkout-page {
+        padding: 40px 15px 60px;
+    }
+
+    .product-form {
+        padding: 25px;
+    }
+
+    .product-top {
+        grid-template-columns: 220px 1fr;
+        gap: 25px;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+
+    .product-info h2 {
+        font-size: 25px;
+    }
+
+    .page-heading h1 {
+        font-size: 35px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .header-container {
+        min-height: 65px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
+    .back-home {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+
+    .checkout-page {
+        padding: 30px 12px 50px;
+    }
+
+
+    .page-heading {
+        margin-bottom: 30px;
+    }
+
+    .page-heading h1 {
+        font-size: 29px;
+    }
+
+    .page-heading p {
+        font-size: 13px;
+    }
+
+
+    .product-form {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+
+    .product-top {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+
+    .product-image {
+        height: 250px;
+    }
+
+
+    .product-info h2 {
+        font-size: 23px;
+    }
+
+    .product-description {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+
+    .form-section {
+        padding: 25px 0;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+
+    .input-group.full-width {
+        grid-column: auto;
+    }
+
+
+    .payment-options {
+        grid-template-columns: 1fr;
+    }
+
+
+    .order-summary > div {
+        gap: 15px;
+    }
+
+    .order-summary strong {
+        max-width: 60%;
+    }
+
+
+    .order-summary .total strong {
+        font-size: 21px;
+    }
+
+
+    .place-order-btn {
+        height: 55px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .back-home {
+        padding: 8px 9px;
+        font-size: 11px;
+    }
+
+    .product-form {
+        padding: 15px;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+    .page-heading h1 {
+        font-size: 25px;
+    }
+
+    .product-info h2 {
+        font-size: 20px;
+    }
+
+    .price {
+        font-size: 22px;
+    }
+}
